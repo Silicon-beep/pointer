@@ -1,37 +1,24 @@
-#include "FoodItem.h"
-#include <iostream>
-#include <iomanip> 
+/******************************************************************************
 
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <iomanip>
 using namespace std;
 
-int main() {
-   string itemName;
-   double amountFat, amountCarbs, amountProtein;
-   double numServings;
-   cout << fixed << setprecision(2);
-   
-   cin >> itemName;
+int main(){
+    
+    Passengers Pass; //creating main passengers class
+	Pass.loadPassengers();
+	Drivers Drive;
+	
 
-   if(itemName == "Water" || itemName == "water") {
-      FoodItem foodItem;
-      foodItem.PrintInfo();
-      cout << fixed << setprecision(2);
-      cout << "Number of calories for " << 1.0 << " serving(s): " << foodItem.GetCalories(1.0) << endl;
-   }
-   
-   else {
-      cin >> amountFat;
-      cin >> amountCarbs;
-      cin >> amountProtein;
-      cin >> numServings;
-      
-      FoodItem foodItem = FoodItem(itemName, amountFat, amountCarbs, amountProtein);
-      foodItem.PrintInfo();
-      cout << "Number of calories for " << 1.0 << " serving(s): " 
-           << foodItem.GetCalories(1.0) << endl;
-      cout << "Number of calories for " << numServings << " serving(s): " 
-           << foodItem.GetCalories(numServings) << endl;
-   }
-
-   return 0;
+    return 0;
 }
